@@ -1,0 +1,125 @@
+---
+// Libro.astro
+---
+
+<section
+  id="libro"
+  class="py-24 md:py-36 bg-cream relative overflow-hidden"
+>
+  <div
+    class="absolute inset-0 pointer-events-none"
+    style="background: radial-gradient(ellipse at 80% 50%, rgba(77,125,76,0.07) 0%, transparent 60%);"
+  ></div>
+
+  <div class="max-w-6xl mx-auto px-6 md:px-12">
+    <div class="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+
+      <!-- Book image -->
+      <div class="flex justify-center md:justify-end relative">
+        <div
+          class="absolute inset-0 blur-3xl opacity-20 rounded-full pointer-events-none"
+          style="background: radial-gradient(circle, #4d7d4c, #cda97f);"
+        ></div>
+        <div class="relative z-10 drop-shadow-2xl transition-transform duration-500 hover:-translate-y-3 hover:rotate-1">
+          <img
+            src="/libro-calmar-la-mente.jpeg"
+            alt="Libro: Calmar la Mente, Sanar el Alma – Raúl Lencinas"
+            class="w-64 md:w-80 rounded-lg"
+          />
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div>
+        <!-- Eyebrow -->
+        <p class="text-sage-600 font-body text-sm tracking-[0.3em] uppercase mb-4 flex items-center gap-3">
+          <span class="w-6 h-px bg-sage-500 inline-block"></span>
+          Nuevo libro
+        </p>
+
+        <!-- Title -->
+        <h2
+          class="font-display leading-tight mb-2 text-forest"
+          style="font-family:'Cormorant Garamond',serif; font-size:clamp(2.2rem,4vw,3.5rem);"
+        >
+          Calmar la Mente,<br/>
+          <em style="color:#4d7d4c;">Sanar el Alma</em>
+        </h2>
+
+        <p class="text-earth-mid font-body text-sm tracking-widest uppercase mb-8 italic" style="color:#8f5a34;">
+          10 casos verídicos para gestionar la ansiedad
+        </p>
+
+        <!-- Hook -->
+        <p class="text-forest font-body font-semibold text-lg mb-4 leading-snug">
+          ¿Sentís que el ruido mental no te permite avanzar?
+        </p>
+
+        <div class="space-y-4 text-forest/70 font-body font-light leading-relaxed mb-8">
+          <p>
+            En este libro, el Master Raúl Lencinas abre las puertas de su consultorio para compartir una mirada profunda y humana sobre uno de los desafíos más grandes de nuestra era: la ansiedad. A través de 10 historias reales, descubrirás que no estás solo en este camino y que la sanación es posible cuando nos atrevemos a mirar más allá del síntoma.
+          </p>
+        </div>
+
+        <!-- What you'll find -->
+        <div class="mb-8 space-y-3">
+          <p class="text-forest font-body font-semibold text-sm tracking-widest uppercase">¿Qué encontrarás?</p>
+          {[
+            { icon: '🌿', title: 'Historias de Transformación', desc: 'Relatos de personas que enfrentaron miedos paralizantes y recuperaron su paz interior.' },
+            { icon: '🔮', title: 'Abordaje Holístico', desc: 'Integración de Life Coaching, Terapia Emocional y Constelaciones Familiares.' },
+            { icon: '🌳', title: 'Comprensión Transgeneracional', desc: 'Cómo las historias de tus ancestros influyen en tu forma de procesar el estrés hoy.' },
+            { icon: '🧭', title: 'Guía Práctica', desc: 'Claves para entender el mensaje de la ansiedad y transformarla en un motor de cambio.' },
+          ].map(({ icon, title, desc }) => (
+            <div class="flex gap-3 items-start">
+              <span class="text-lg mt-0.5 flex-shrink-0">{icon}</span>
+              <p class="text-sm font-body text-forest/70 leading-relaxed">
+                <strong class="text-forest font-semibold">{title}:</strong> {desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <!-- Quote -->
+        <blockquote
+          class="border-l-2 pl-5 mb-10 italic font-display text-lg text-forest/80 leading-relaxed"
+          style="font-family:'Cormorant Garamond',serif; border-color:#cda97f;"
+        >
+          "No se trata solo de silenciar los pensamientos, sino de comprender el origen emocional que los sostiene para sanar desde la raíz."
+        </blockquote>
+
+        <!-- Price + CTA -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+          <div>
+            <p class="text-forest/40 text-xs font-body tracking-widest uppercase mb-1">Precio</p>
+            <p
+              class="font-display text-4xl font-semibold text-forest"
+              style="font-family:'Cormorant Garamond',serif;"
+            >
+              $10.000
+            </p>
+          </div>
+
+          <a
+            href="https://wa.me/5491132585949?text=Hola%20Ra%C3%BAl%2C%20quiero%20comprar%20el%20libro%20%22Calmar%20la%20Mente%2C%20Sanar%20el%20Alma%22"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-gold flex items-center gap-2.5 text-white font-body font-semibold px-8 py-4 rounded-full text-base tracking-wide"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.526 5.845L.057 23.272a.5.5 0 00.6.6l5.516-1.447A11.949 11.949 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.94a9.93 9.93 0 01-5.065-1.381l-.363-.215-3.764.987.999-3.654-.237-.375A9.935 9.935 0 012.06 12C2.06 6.5 6.5 2.06 12 2.06S21.94 6.5 21.94 12 17.5 21.94 12 21.94z"/>
+            </svg>
+            Comprar por WhatsApp
+          </a>
+        </div>
+
+        <p class="mt-5 text-forest/40 text-xs font-body flex items-center gap-2">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+          Coordinás envío y pago directamente con Raúl
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
