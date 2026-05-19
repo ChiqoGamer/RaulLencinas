@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sage-deep: #2f5030;
+  --sage-mid: #4d7d4c;
+  --sage-light: #9bba9a;
+  --earth-deep: #5f3a26;
+  --earth-mid: #8f5a34;
+  --earth-light: #cda97f;
+  --cream: #F5F0E8;
+  --forest: #1C3A1C;
+  --gold: #C4A35A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--cream);
+  color: var(--forest);
+  overflow-x: hidden;
+}
+
+/* ── Organic noise texture overlay ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.4;
+}
+
+/* ── Scroll reveal animation ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.reveal-delay-1 { animation-delay: 0.1s; }
+.reveal-delay-2 { animation-delay: 0.25s; }
+.reveal-delay-3 { animation-delay: 0.4s; }
+.reveal-delay-4 { animation-delay: 0.55s; }
+
+/* ── Leaf float animation ── */
+@keyframes floatLeaf {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33%       { transform: translateY(-14px) rotate(3deg); }
+  66%       { transform: translateY(-6px) rotate(-2deg); }
+}
+
+.leaf-float { animation: floatLeaf 8s ease-in-out infinite; }
+.leaf-float-slow { animation: floatLeaf 12s ease-in-out infinite; }
+.leaf-float-med  { animation: floatLeaf 10s ease-in-out infinite 2s; }
+
+/* ── Glassmorphism cards ── */
+.glass-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.earth-card {
+  background: rgba(95, 58, 38, 0.85);
+  backdrop-filter: blur(12px);
+}
+
+/* ── Gold shimmer button ── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.btn-gold {
+  background: linear-gradient(
+    90deg,
+    var(--earth-mid) 0%,
+    var(--gold) 40%,
+    var(--earth-light) 60%,
+    var(--earth-mid) 100%
+  );
+  background-size: 200% auto;
+  transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-gold:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(196, 163, 90, 0.45);
+}
+
+/* ── Section divider wave ── */
+.wave-divider svg {
+  display: block;
+  width: 100%;
+}
+
+/* ── Decorative circle pulse ── */
+@keyframes pulse-ring {
+  0%   { transform: scale(1);   opacity: 0.6; }
+  70%  { transform: scale(1.15); opacity: 0; }
+  100% { transform: scale(1);   opacity: 0; }
+}
+
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  animation: pulse-ring 2.5s ease-out infinite;
+}
+
+/* ── Horizontal card hover lift ── */
+.service-card {
+  transition: transform 0.35s cubic-bezier(.22,.68,0,1.2), box-shadow 0.35s ease;
+}
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 24px 64px rgba(31, 58, 31, 0.18);
+}
+
+/* ── WhatsApp sticky button ── */
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+  70%       { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+}
+.wa-btn { animation: wa-pulse 2s ease infinite; }

@@ -1,0 +1,149 @@
+---
+// Contacto.astro
+---
+
+<section
+  id="contacto"
+  class="py-24 md:py-36 relative overflow-hidden"
+  style="background: linear-gradient(160deg, #2f5030 0%, #1C3A1C 100%);"
+>
+  <!-- Decorative leaves -->
+  <div class="absolute bottom-0 left-0 opacity-10 pointer-events-none">
+    <svg width="280" height="320" viewBox="0 0 280 320" fill="none">
+      <path d="M140 10C190 10 250 60 240 140 230 210 170 300 140 315 110 300 50 210 40 140 30 60 90 10 140 10Z" fill="#6e9a6d"/>
+    </svg>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-6 md:px-12">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <p class="text-cream font-body text-sm tracking-[0.3em] uppercase mb-4 flex items-center justify-center gap-3">
+        <span class="w-6 h-px bg-cream inline-block"></span>
+        Empezá hoy
+        <span class="w-6 h-px bg-cream inline-block"></span>
+      </p>
+      <h2
+        class="font-display text-cream leading-tight mb-6"
+        style="font-family:'Cormorant Garamond',serif; font-size:clamp(2.2rem,4vw,3.5rem);"
+      >
+        ¿Listo para <em style="color:#cda97f;">transformar</em><br/>tu historia?
+      </h2>
+      <p class="text-cream/60 font-body max-w-lg mx-auto">
+        Escribime por WhatsApp o completá el formulario. Respondo en menos de 24 horas.
+      </p>
+    </div>
+
+    <!-- Contact grid -->
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Left: contact options -->
+      <div class="flex flex-col gap-4">
+        <!-- WhatsApp -->
+        <a
+          href="https://wa.me/5491132585949?text=Hola%20Raul%2C%20quiero%20consultar%20sobre%20una%20sesi%C3%B3n"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="glass-card rounded-2xl p-6 flex items-center gap-5 group hover:bg-white/20 transition-colors"
+        >
+          <div class="w-14 h-14 rounded-full bg-green-500/20 border border-green-400/30 flex items-center justify-center flex-shrink-0">
+            <svg class="w-7 h-7 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.526 5.845L.057 23.272a.5.5 0 00.6.6l5.516-1.447A11.949 11.949 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.94a9.93 9.93 0 01-5.065-1.381l-.363-.215-3.764.987.999-3.654-.237-.375A9.935 9.935 0 012.06 12C2.06 6.5 6.5 2.06 12 2.06S21.94 6.5 21.94 12 17.5 21.94 12 21.94z"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <p class="text-cream font-body font-semibold mb-0.5">WhatsApp</p>
+            <p class="text-cream/55 text-sm font-body">Consultá sin compromiso · Respuesta rápida</p>
+          </div>
+          <svg class="w-5 h-5 text-cream/30 group-hover:text-cream/60 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a
+          href="https://instagram.com/raullencinascoach"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="glass-card rounded-2xl p-6 flex items-center gap-5 group hover:bg-white/20 transition-colors"
+        >
+          <div class="w-14 h-14 rounded-full bg-pink-500/20 border border-pink-400/30 flex items-center justify-center flex-shrink-0">
+            <svg class="w-7 h-7 text-pink-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <p class="text-cream font-body font-semibold mb-0.5">Instagram</p>
+            <p class="text-cream/55 text-sm font-body">Contenido educativo y frases motivacionales</p>
+          </div>
+          <svg class="w-5 h-5 text-cream/30 group-hover:text-cream/60 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+
+        <!-- Location -->
+        <div class="glass-card rounded-2xl p-6 flex items-start gap-5">
+          <div class="w-14 h-14 rounded-full bg-earth-500/20 border border-earth-400/30 flex items-center justify-center flex-shrink-0">
+            <svg class="w-7 h-7 text-earth-light" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="text-cream font-body font-semibold mb-1">Consultorio</p>
+            <p class="text-cream/55 text-sm font-body leading-relaxed">
+              Pedro Díaz 2041, Virreyes, Bs.As.<br/>
+              <span class="text-cream/40">Jornadas: Pedro Ballester 2458, Garín</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: simple contact form -->
+      <div class="glass-card rounded-2xl p-8">
+        <h3
+          class="font-display text-cream text-xl mb-6"
+          style="font-family:'Cormorant Garamond',serif;"
+        >
+          Enviame un mensaje
+        </h3>
+        <div id="contact-form" class="flex flex-col gap-4">
+          <div>
+            <label class="block text-cream/60 text-xs font-body tracking-widest uppercase mb-2">Nombre</label>
+            <input
+              type="text"
+              id="input-nombre"
+              placeholder="Tu nombre"
+              class="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-cream placeholder-cream/30 font-body text-sm focus:outline-none focus:border-earth-light/50 transition-colors"
+            />
+          </div>
+          <div>
+            <label class="block text-cream/60 text-xs font-body tracking-widest uppercase mb-2">Consulta</label>
+            <textarea
+              id="input-mensaje"
+              rows="4"
+              placeholder="Contame brevemente qué te trae por aquí..."
+              class="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-cream placeholder-cream/30 font-body text-sm focus:outline-none focus:border-earth-light/50 transition-colors resize-none"
+            ></textarea>
+          </div>
+          <button
+            id="send-wa-btn"
+            class="btn-gold w-full text-white font-body font-semibold py-4 rounded-xl tracking-wide text-sm flex items-center justify-center gap-2"
+          >
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.526 5.845L.057 23.272a.5.5 0 00.6.6l5.516-1.447A11.949 11.949 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.94a9.93 9.93 0 01-5.065-1.381l-.363-.215-3.764.987.999-3.654-.237-.375A9.935 9.935 0 012.06 12C2.06 6.5 6.5 2.06 12 2.06S21.94 6.5 21.94 12 17.5 21.94 12 21.94z"/>
+            </svg>
+            Enviar por WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById('send-wa-btn');
+    btn?.addEventListener('click', () => {
+      const nombre = (document.getElementById('input-nombre') as HTMLInputElement)?.value || '';
+      const mensaje = (document.getElementById('input-mensaje') as HTMLTextAreaElement)?.value || '';
+      const text = encodeURIComponent(`Hola Raul, soy ${nombre}. ${mensaje}`);
+      window.open(`https://wa.me/5491132585949?text=${text}`, '_blank');
+    });
+  </script>
+</section>

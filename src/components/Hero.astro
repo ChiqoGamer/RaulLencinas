@@ -1,0 +1,153 @@
+---
+// Hero.astro
+---
+
+<section
+  id="inicio"
+  class="relative min-h-screen flex items-center overflow-hidden"
+  style="background: linear-gradient(135deg, #1C3A1C 0%, #2f5030 45%, #5f3a26 100%);"
+>
+  <!-- Decorative leaf SVGs -->
+  <div class="absolute inset-0 pointer-events-none select-none overflow-hidden">
+    <!-- Large leaf top-right -->
+    <svg
+      class="absolute -top-8 right-0 w-[45vw] max-w-[520px] leaf-float opacity-80"
+      viewBox="0 0 400 520"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M320 20 C420 80, 460 200, 380 340 C320 440, 180 500, 60 480 C-20 460, -10 360, 40 300 C100 220, 160 180, 200 120 C240 60, 260 20, 320 20Z"
+        fill="url(#leafGrad1)"
+        opacity="0.85"
+      />
+      <!-- Leaf veins -->
+      <path d="M320 20 C200 180, 100 340, 60 480" stroke="#4d7d4c" stroke-width="1.5" opacity="0.4" fill="none"/>
+      <path d="M280 80 C240 160, 140 280, 80 400" stroke="#4d7d4c" stroke-width="1" opacity="0.3" fill="none"/>
+      <path d="M360 140 C310 220, 200 320, 100 420" stroke="#4d7d4c" stroke-width="1" opacity="0.3" fill="none"/>
+      <defs>
+        <linearGradient id="leafGrad1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#3a6339"/>
+          <stop offset="60%" stop-color="#4d7d4c"/>
+          <stop offset="100%" stop-color="#6e9a6d"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- Medium leaf mid-right -->
+    <svg
+      class="absolute top-1/3 right-8 w-[22vw] max-w-[240px] leaf-float-med opacity-60"
+      viewBox="0 0 240 320"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M180 10 C240 60, 260 140, 200 230 C150 300, 40 340, 10 280 C-20 220, 40 160, 80 110 C120 60, 140 10, 180 10Z"
+        fill="url(#leafGrad2)"
+        opacity="0.9"
+      />
+      <path d="M180 10 C120 120, 60 230, 10 280" stroke="#cda97f" stroke-width="1" opacity="0.4" fill="none"/>
+      <defs>
+        <linearGradient id="leafGrad2" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#8f5a34"/>
+          <stop offset="100%" stop-color="#cda97f"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- Small leaf bottom-right -->
+    <svg
+      class="absolute bottom-16 right-24 w-[16vw] max-w-[180px] leaf-float-slow opacity-50"
+      viewBox="0 0 180 240"
+      fill="none"
+    >
+      <path
+        d="M140 8 C190 50, 200 120, 150 190 C110 240, 20 260, 4 200 C-12 140, 40 100, 75 65 C110 30, 120 8, 140 8Z"
+        fill="#6e9a6d"
+        opacity="0.7"
+      />
+    </svg>
+
+    <!-- Subtle radial gradient overlay -->
+    <div
+      class="absolute inset-0"
+      style="background: radial-gradient(ellipse at 30% 50%, rgba(77,125,76,0.15) 0%, transparent 60%);"
+    ></div>
+
+    <!-- Bottom curved transition -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 80 C360 20, 1080 20, 1440 80 L1440 80 L0 80Z" fill="#F5F0E8"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-6xl mx-auto px-6 md:px-12 w-full pt-28 pb-32">
+    <div class="max-w-2xl">
+      <!-- Eyebrow -->
+      <p
+        class="reveal reveal-delay-1 text-cream font-body text-sm tracking-[0.35em] uppercase mb-6 flex items-center gap-3"
+      >
+        <span class="w-8 h-px bg-cream inline-block"></span>
+        Terapias Integrativas
+      </p>
+
+      <!-- Main heading -->
+      <h1
+        class="reveal reveal-delay-2 font-display leading-[1.08] mb-6"
+        style="font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 7vw, 5.5rem); color: #F5F0E8;"
+      >
+        Calmar la Mente,<br />
+        <em style="color: #cda97f; font-style: italic;">Sanar el Alma</em>
+      </h1>
+
+      <!-- Subtitle -->
+      <p
+        class="reveal reveal-delay-3 text-cream/75 font-body font-light leading-relaxed mb-10 max-w-xl"
+        style="font-size: clamp(1rem, 2vw, 1.15rem);"
+      >
+        Descubrí el origen de tus bloqueos y transformá tu historia familiar en tu mayor fortaleza. 
+        Un proceso de sanación profunda a través del análisis transgeneracional y las constelaciones.
+      </p>
+
+      <!-- CTAs -->
+      <div class="reveal reveal-delay-4 flex flex-wrap gap-4 items-center">
+        <a
+          href="https://wa.me/5491132585949?text=Hola%20Raul%2C%20quiero%20consultar%20sobre%20una%20sesi%C3%B3n"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-gold text-white font-body font-semibold px-8 py-4 rounded-full text-base tracking-wide flex items-center gap-2.5"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.526 5.845L.057 23.272a.5.5 0 00.6.6l5.516-1.447A11.949 11.949 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.94a9.93 9.93 0 01-5.065-1.381l-.363-.215-3.764.987.999-3.654-.237-.375A9.935 9.935 0 012.06 12C2.06 6.5 6.5 2.06 12 2.06S21.94 6.5 21.94 12 17.5 21.94 12 21.94z"/>
+          </svg>
+          Reservar una sesión
+        </a>
+        <a
+          href="#sobre-mi"
+          class="text-cream/70 hover:text-cream font-body text-sm tracking-widest uppercase transition-colors flex items-center gap-2 group"
+        >
+          Conocé más
+          <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Trust badges -->
+      <div class="reveal reveal-delay-4 flex flex-wrap gap-6 mt-14 pt-10 border-t border-cream/10">
+        {[
+          { icon: '🌿', text: 'Más de 10 años de experiencia' },
+          { icon: '🌐', text: 'Atención online y presencial' },
+          { icon: '⭐', text: 'Miembro Rotary Sin Fronteras' },
+        ].map(({ icon, text }) => (
+          <div class="flex items-center gap-2.5 text-cream/60">
+            <span class="text-xl">{icon}</span>
+            <span class="text-sm font-body">{text}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
